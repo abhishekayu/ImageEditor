@@ -5,6 +5,7 @@ import {
   FaArrowsAlt,
   FaPencilAlt,
   FaFilter,
+  FaDownload,
 } from "react-icons/fa";
 import useStore from "../store/useStore";
 import CropModal from "./CropImageModal";
@@ -25,6 +26,13 @@ const ShowPreview = () => {
 
   const handleRotate = () => {
     setRotation(rotation + 90);
+  };
+
+  const downloadImage = () => {
+    const link = document.createElement("a");
+    link.download = "edited-image.png";
+    link.href = croppedImage || image;
+    link.click();
   };
 
   return (
@@ -88,6 +96,13 @@ const ShowPreview = () => {
           >
             <FaFilter className="inline-block mr-2" />
             Filter
+          </button>
+          <button
+            onClick={() => downloadImage()}
+            className="bg-[#6e99f3] text-white p-2 rounded w-[200px] border-dashed border-2 hover:bg-[#030e10] duration-300 ease-in-out sm:w-[48%] lg:w-[200px]"
+          >
+            <FaDownload className="inline-block mr-2" />
+            Download
           </button>
         </div>
       )}

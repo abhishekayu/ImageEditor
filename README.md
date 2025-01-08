@@ -39,7 +39,7 @@ This image editor provides a variety of tools for manipulating images, including
   - **Contrast**
   - **Filter theme**
 
-### 6. **AI Image Search & Editing**
+### 6. **AI Image Search & Editing **
 
 - You can generate images using AI, and then perform all the image editing tools (resize, crop, rotate, mask, filter) on the AI-generated image.
 - The integration allows users to seamlessly apply transformations to AI-created visuals.
@@ -67,6 +67,14 @@ To run this application locally, follow these steps:
 ```bash
 npm install
 ```
+
+3. Start Server:
+
+```bash
+npm start
+```
+
+Your application will be available at http://localhost:3000.
 
 ### Design & Implementation Choices\*\*
 
