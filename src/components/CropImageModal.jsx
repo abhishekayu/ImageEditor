@@ -7,6 +7,7 @@ import { FaCrop, FaTimes } from "react-icons/fa";
 const CropModal = ({ isOpen, onClose }) => {
   const image = useStore((state) => state.image);
   const setCroppedImage = useStore((state) => state.setCroppedImage);
+  const setImage = useStore((state) => state.setImage);
 
   const [cropper, setCropper] = useState(null);
   const imageRef = useRef(null);
@@ -36,7 +37,8 @@ const CropModal = ({ isOpen, onClose }) => {
     if (cropper) {
       const croppedCanvas = cropper.getCroppedCanvas();
       const croppedImg = croppedCanvas.toDataURL();
-      setCroppedImage(croppedImg);
+      // setCroppedImage(croppedImg);
+      setImage(croppedImg);
       onClose();
       setCropper(null);
     }
