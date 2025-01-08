@@ -38,7 +38,7 @@ const AISimulation = () => {
     <div className="p-4 space-y-3">
       <h1 className="text-3xl font-bold text-center text-white">
         <TbPhotoEdit className="inline-block mr-2" />
-        Image Uploader
+        Image Editor
       </h1>
       <div className="mb-4 flex items-center space-x-3">
         <input
