@@ -39,10 +39,16 @@ This image editor provides a variety of tools for manipulating images, including
   - **Contrast**
   - **Filter theme**
 
-### 6. **AI Image Search & Editing **
+### 6. **AI Image Search & Editing**
 
-- You can generate images using AI, and then perform all the image editing tools (resize, crop, rotate, mask, filter) on the AI-generated image.
+Note: AI Image Search & Editing is only a simulation feature.
+
+- You can generate images using AI or enhance image using AI, and then perform all the image editing tools (resize, crop, rotate, mask, filter) on the AI-generated image.
 - The integration allows users to seamlessly apply transformations to AI-created visuals.
+
+## 7. **Undo-Redo**
+
+- You can undo and redo the every image state using ctrl + z and ctrl + y or command + z and command + y.
 
 ## Installation
 
