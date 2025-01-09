@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { FaUpload } from "react-icons/fa"; // Import the upload icon
+import { FaUpload } from "react-icons/fa";
 import useStore from "../store/useStore";
 
 const ImageUpload = () => {
   const setImage = useStore((state) => state.setImage);
   const [dragging, setDragging] = useState(false);
-  const [error, setError] = useState(""); // To store error message
+  const [error, setError] = useState("");
 
   const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
 
