@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import useStore from "../store/useStore";
 import { FaSpinner } from "react-icons/fa";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { TbPhotoEdit } from "react-icons/tb";
 
 const AISimulation = () => {
   const setImage = useStore((state) => state.setImage);
@@ -36,9 +34,8 @@ const AISimulation = () => {
 
   return (
     <div className="p-4 space-y-3">
-      <h1 className="text-3xl font-bold text-center text-white">
-        <TbPhotoEdit className="inline-block mr-2" />
-        Image Editor
+      <h1 className="text-3xl font-bold text-center text-transparent bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text animate-shine bg-[length:400%_100%]">
+        AI Gen Image Editor
       </h1>
       <div className="mb-4 flex items-center space-x-3">
         <input
@@ -65,9 +62,15 @@ const AISimulation = () => {
               <span>Processing</span>
             </div>
           ) : (
-            <div className="flex items-center gap-2">
-              <GiArtificialIntelligence />
-              <span>AI Touch</span>
+            <div className="flex items-center justify-center gap-2">
+              <span
+                className="text-transparent 
+                   bg-gradient-to-r from-white via-blue-500 to-white 
+                   bg-clip-text animate-shine 
+                   bg-[length:400%_100%]"
+              >
+                AI Touch
+              </span>
             </div>
           )}
         </button>

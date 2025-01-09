@@ -55,8 +55,14 @@ const ShowPreview = () => {
         </div>
       ) : (
         <div className="flex flex-row items-center justify-center gap-2">
-          <MdImageNotSupported className="text-white" />
-          <p className="text-white">No image uploaded or generated</p>
+          <p
+            className="text-transparent 
+                   bg-gradient-to-r from-white via-blue-500 to-white 
+                   bg-clip-text animate-shine 
+                   bg-[length:400%_100%]"
+          >
+            No image uploaded or AI generated
+          </p>
         </div>
       )}
 

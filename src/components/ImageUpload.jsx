@@ -5,10 +5,18 @@ import useStore from "../store/useStore";
 const ImageUpload = () => {
   const setImage = useStore((state) => state.setImage);
   const [dragging, setDragging] = useState(false);
+  const [error, setError] = useState(""); // To store error message
+
+  const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      if (!validImageTypes.includes(file.type)) {
+        setError("Invalid file type. Please upload a JPG, JPEG, or PNG image.");
+        return;
+      }
+      setError("");
       const reader = new FileReader();
       reader.onloadend = () => {
         setImage(reader.result);
@@ -31,6 +39,11 @@ const ImageUpload = () => {
     setDragging(false);
     const file = e.dataTransfer.files[0];
     if (file) {
+      if (!validImageTypes.includes(file.type)) {
+        setError("Invalid file type. Please upload a JPG, JPEG, or PNG image.");
+        return;
+      }
+      setError("");
       const reader = new FileReader();
       reader.onloadend = () => {
         setImage(reader.result);
@@ -63,6 +76,13 @@ const ImageUpload = () => {
           </div>
         </label>
       </div>
+
+      {/* Show error message if invalid file type is selected */}
+      {error && (
+        <div className="mt-2 text-red-500 text-center">
+          <p>{error}</p>
+        </div>
+      )}
     </div>
   );
 };
