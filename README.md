@@ -1,4 +1,4 @@
-# Image Editor
+# AT-Gen Image Editor
 
 This image editor provides a variety of tools for manipulating images, including crop, rotate, resize, masking, filters, and AI-powered image generation. It offers a user-friendly interface with live previews for adjustments and even allows editing of AI-generated images.
 
@@ -88,3 +88,4 @@ Your application will be available at http://localhost:3000.
 - UI Components: Tailwind CSS is used for styling, providing a responsive and clean user interface.
 - Image Manipulation: Libraries like cropperjs are used for crop and rotate functionalities, and Canvas is leveraged for resizing and masking.
 - AI Integration: The AI-powered image search allows users to generate images that can be edited with the same set of tools available for uploaded images.
+- Undo & Redo : Zustand has been userd for undo redo to make a history of execution .
